@@ -46,7 +46,7 @@ fastify.delete('/teams', async (request, reply) => {
   return teams;
 })
 
-const host = process.env.NODE.env === 'production' ? '0.0.0.0' : '127.1';
+const host = process.env.NODE_ENV === 'production' ? '0.0.0.0' : '127.1';
 const port = process.env.$PORT || process.env.PORT || 3000;
 /**
  * Run the server!
